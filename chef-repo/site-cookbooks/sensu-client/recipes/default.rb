@@ -24,8 +24,8 @@ end
 
 include_recipe "sensu::client_service"
 
-remote-file "/etc/sensu/plugins/check-procs.rb" do
-  source "https://raw.github.com/sensu/sensu-community-plugins/master/plugins/processes/check-procs.rb"
+remote_file "/etc/sensu/plugins/check-disk.rb" do
+  source "https://raw.github.com/sensu/sensu-community-plugins/master/plugins/system/check-disk.rb"
   mode 0755
 end
 

@@ -24,4 +24,10 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     end
   end
 
+  config.vm.define :graphite do |graphite|
+    graphite.vm.hostname = "graphite"
+    graphite.vm.box = "precise32"
+    graphite.vm.network :private_network, ip: "192.168.33.12"
+  end
+
 end

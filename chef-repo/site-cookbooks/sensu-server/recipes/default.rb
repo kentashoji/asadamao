@@ -9,11 +9,12 @@
 
 if node["sensu-server-wrapper"]["iptables_enabled"]
 
+  include_recipe "iptables"
+
   directory "/etc/iptables.d/iptables" do
     action :create
   end
-
-  include_recipe "iptables"
+  
   iptables_rule "iptables/sensu_dashboard"
   iptables_rule "iptables/rabbitmq"
   iptables_rule "iptables/sensu_api"

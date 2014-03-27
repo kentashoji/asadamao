@@ -1,4 +1,8 @@
 site :opscode
 
+cookbook 'nmap'
+cookbook 'emacs'
 cookbook 'sensu'
 cookbook 'iptables'
+cookbook 'graphite'
+cookbook 'monitor'

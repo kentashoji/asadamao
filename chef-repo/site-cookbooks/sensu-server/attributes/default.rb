@@ -1,6 +1,6 @@
 default.sensu.use_ssl = false
 default["sensu"]["use_embedded_ruby"] = true 
-default["sensu"]["rabbitmq"]["host"] = "localhost"
+default["sensu"]["rabbitmq"]["host"] = "192.168.33.10"
 default["sensu"]["rabbitmq"]["port"] = 5672
 default["sensu"]["rabbitmq"]["user"] = "admin"
 default["sensu"]["rabbitmq"]["password"] = "password"
@@ -16,5 +16,5 @@ default["sensu"]["dashboard"]["password"] = "password"
 default["sensu"]["graphite"]["host"] = "localhost"
 default["sensu"]["graphite"]["port"] = 2003 
 
-default["sensu-server-wrapper"]["iptables_enabled"] = true
+default["sensu-server-wrapper"]["iptables_enabled"] = false
 default["sensu-server-wrapper"]["use_apache"] = false 

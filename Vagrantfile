@@ -24,9 +24,20 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     end
   end
 
-  config.vm.define :graphite do |graphite|
-    graphite.vm.hostname = "graphite"
-    graphite.vm.box = "precise32"
+  config.vm.define :client2 do |client|
+    client.vm.hostname = "client2"
+    client.vm.box = "precise32"
+    client.vm.network :private_network, ip: "192.168.33.13"
+    client.vm.provider :virtualbox do |vb|
+      vb.gui = false
+      vb.customize ["modifyvm", :id, "--memory", "256"]
+    end
+  end
+
+  config.vm.define :sensu_graphite do |graphite|
+    graphite.vm.hostname = "sensu-graphite"
+    graphite.vm.box = "opscode-ubuntu-12.04"
+    graphite.vm.box_url = "http://opscode-vm-bento.s3.amazonaws.com/vagrant/virtualbox/opscode_ubuntu-12.04_chef-provisionerless.box"
     graphite.vm.network :private_network, ip: "192.168.33.12"
   end
 

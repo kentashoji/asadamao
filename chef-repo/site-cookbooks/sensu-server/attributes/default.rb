@@ -13,7 +13,7 @@ default["sensu"]["dashboard"]["bind"] = "0.0.0.0"
 default["sensu"]["dashboard"]["port"] = 8080
 default["sensu"]["dashboard"]["user"] = "admin"
 default["sensu"]["dashboard"]["password"] = "password"
-default["sensu"]["graphite"]["host"] = "localhost"
+default["sensu"]["graphite"]["host"] = "192.168.33.12"
 default["sensu"]["graphite"]["port"] = 2003 
 
 default["sensu-server-wrapper"]["iptables_enabled"] = false

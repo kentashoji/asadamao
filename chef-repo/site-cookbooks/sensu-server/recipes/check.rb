@@ -5,10 +5,6 @@ template "/etc/sensu/conf.d/check-disk.json" do
   source "check-disk.json.erb"
 end
 
-service "sensu-server" do
-  action :restart
-end
-
 service "sensu-api" do
   action :restart
 end
